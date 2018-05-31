@@ -99,24 +99,28 @@ struct layer_data {
     VkLayerDispatchTable dispatch_table = {};
 };
 
-#if defined(__GNUC__)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#endif
 static const char *kVUID_PVError_NONE = "UNASSIGNED-GeneralParameterError-Info";
+static const char *PVErrorNONE() { return kVUID_PVError_NONE; }
 static const char *kVUID_PVError_InvalidUsage = "UNASSIGNED-GeneralParameterError-InvalidUsage";
+static const char *PVErrorInvalidUsage() { return kVUID_PVError_InvalidUsage; }
 static const char *kVUID_PVError_InvalidStructSType = "UNASSIGNED-GeneralParameterError-InvalidStructSType";
+static const char *PVErrorInvalidStructSType() { return kVUID_PVError_InvalidStructSType; }
 static const char *kVUID_PVError_InvalidStructPNext = "UNASSIGNED-GeneralParameterError-InvalidStructPNext";
+static const char *PVErrorInvalidStructPNext() { return kVUID_PVError_InvalidStructPNext; }
 static const char *kVUID_PVError_RequiredParameter = "UNASSIGNED-GeneralParameterError-RequiredParameter";
+static const char *PVErrorRequiredParameter() { return kVUID_PVError_RequiredParameter; }
 static const char *kVUID_PVError_ReservedParameter = "UNASSIGNED-GeneralParameterError-ReservedParameter";
+static const char *PVErrorReservedParameter() { return kVUID_PVError_ReservedParameter; }
 static const char *kVUID_PVError_UnrecognizedValue = "UNASSIGNED-GeneralParameterError-UnrecognizedValue";
+static const char *PVErrorUnrecognizedValue() { return kVUID_PVError_UnrecognizedValue; }
 static const char *kVUID_PVError_DeviceLimit = "UNASSIGNED-GeneralParameterError-DeviceLimit";
+static const char *PVErrorDeviceLimit() { return kVUID_PVError_DeviceLimit; }
 static const char *kVUID_PVError_DeviceFeature = "UNASSIGNED-GeneralParameterError-DeviceFeature";
+static const char *PVErrorDeviceFeature() { return kVUID_PVError_DeviceFeature; }
 static const char *kVUID_PVError_FailureCode = "UNASSIGNED-GeneralParameterError-FailureCode";
+static const char *PVErrorFailureCode() { return kVUID_PVError_FailureCode; }
 static const char *kVUID_PVError_ExtensionNotEnabled = "UNASSIGNED-GeneralParameterError-ExtensionNotEnabled";
-#if defined(__GNUC__)
-#pragma GCC diagnostic pop
-#endif
+static const char *PVErrorExtensionNotEnabled() { return kVUID_PVError_ExtensionNotEnabled; }
 
 #if 0  // TBD - should see if we can add the expository text below into the spec reference string database
 enum ErrorCode {
